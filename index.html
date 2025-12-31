@@ -1,276 +1,232 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adakami - Layanan Bantuan Terpercaya</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fa;
-      color: #222;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    .card {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      padding: 40px 20px;
-    }
-
-    .logo {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .logo img {
-      max-width: 200px;
-    }
-
-    .hero {
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 17px;
-      color: #555;
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      background: #25D366;
-      color: #fff;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin: 50px 0;
-    }
-
-    .stat-box {
-      text-align: center;
-      padding: 30px;
-    }
-
-    .stat-box h2 {
-      font-size: 32px;
-      color: #1f7cff;
-    }
-
-    .services h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .service-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .service-item {
-      background: #f5f7fa;
-      padding: 25px;
-      border-radius: 10px;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    .contact {
-      margin-top: 50px;
-      text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      color: #666;
-      font-size: 14px;
-    }
-
-    /* WhatsApp Floating - Android Optimized */
-    .wa-float {
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      width: 56px;
-      height: 56px;
-      background-color: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-      z-index: 99999;
-
-      -webkit-tap-highlight-color: transparent;
-      touch-action: manipulation;
-      animation: pulse 1.6s infinite;
-    }
-
-    .wa-float img {
-      width: 32px;
-    }
-
-    .wa-float:active {
-      transform: scale(0.92);
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      70% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-
-    /* Ripple Android */
-    .ripple {
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-    }
-
-    .ripple-effect {
-      position: absolute;
-      border-radius: 50%;
-      transform: scale(0);
-      animation: ripple-animation 600ms linear;
-      background: rgba(255,255,255,0.5);
-    }
-
-    @keyframes ripple-animation {
-      to {
-        transform: scale(3);
-        opacity: 0;
-      }
-    }
-
-    /* Aman untuk gesture Android */
-    @media (max-width: 480px) {
-      .wa-float {
-        bottom: 72px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<div class="container">
-
-  <div class="logo">
-    <img src="https://69543702934f3f92381f9e9c.imgix.net/csadakami.png" alt="Adakami">
-  </div>
-
-  <div class="card hero">
-    <h1>Layanan Bantuan Profesional</h1>
-    <p>Solusi terpercaya dengan layanan cepat dan profesional.</p>
-
-    <a href="https://wa.me/6285237474741?text=Halo%20CS%20AdaKami." target="_blank">
-      <span class="btn ripple">Hubungi Kami di WhatsApp</span>
-    </a>
-  </div>
-
-  <div class="stats">
-    <div class="card stat-box">
-      <h2>24/7</h2>
-      <p>Siap Melayani</p>
-    </div>
-    <div class="card stat-box">
-      <h2>100%</h2>
-      <p>Terpercaya</p>
-    </div>
-    <div class="card stat-box">
-      <h2>Cepat</h2>
-      <p>Respon Cepat</p>
-    </div>
-  </div>
-
-  <div class="card services">
-    <h2>Layanan</h2>
-    <div class="service-list">
-      <a href="https://wa.me/6285237474741?text=Halo%20CS%20AdaKami.%20Saya%20ingin%20konsultasi." target="_blank">
-        <div class="service-item ripple">Konsultasi</div>
-      </a>
-      <a href="https://wa.me/6285237474741?text=Halo%20CS%20AdaKami.%20Saya%20butuh%20bantuan%2024%2F7." target="_blank">
-        <div class="service-item ripple">Bantuan 24/7</div>
-      </a>
-      <a href="https://wa.me/6285237474741?text=Halo%20CS%20AdaKami.%20Saya%20butuh%20dukungan%20teknis." target="_blank">
-        <div class="service-item ripple">Dukungan Teknis</div>
-      </a>
-      <a href="https://wa.me/6285237474741?text=Halo%20CS%20AdaKami.%20Saya%20ingin%20solusi%20profesional." target="_blank">
-        <div class="service-item ripple">Solusi Profesional</div>
-      </a>
-    </div>
-  </div>
-
-  <div class="card contact">
-    <p>Hubungi Kami</p>
-    <a href="https://wa.me/6285237474741?text=Halo%20CS%20AdaKami." target="_blank">
-      <p style="color:#25D366;">085237474741</p>
-    </a>
-    <p>Tersedia 24/7</p>
-  </div>
-
-  <footer>
-    © 2025 Adakami
-  </footer>
-
-</div>
-
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/6285237474741?text=Halo%20CS%20AdaKami."
-   class="wa-float ripple"
-   target="_blank"
-   aria-label="Chat WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
-
-<script>
-document.querySelectorAll('.ripple').forEach(el => {
-  el.addEventListener('click', function(e) {
-    const ripple = document.createElement('span');
-    ripple.className = 'ripple-effect';
-
-    const rect = this.getBoundingClientRect();
-    const size = Math.max(rect.width, rect.height);
-
-    ripple.style.width = ripple.style.height = size + 'px';
-    ripple.style.left = e.clientX - rect.left - size / 2 + 'px';
-    ripple.style.top = e.clientY - rect.top - size / 2 + 'px';
-
-    this.appendChild(ripple);
-
-    setTimeout(() => ripple.remove(), 600);
-  });
-});
-</script>
-
-</body>
-</html>
+<!DOCTYPE html>  
+<html lang="id">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Adakami - Layanan Bantuan Terpercaya</title>  
+  
+  <style>  
+    body {  
+      margin: 0;  
+      font-family: Arial, Helvetica, sans-serif;  
+      background: #f5f7fa;  
+      color: #222;  
+    }  
+  
+    a {  
+      text-decoration: none;  
+      color: inherit;  
+    }  
+  
+    .container {  
+      max-width: 1100px;  
+      margin: auto;  
+      padding: 40px 20px;  
+    }  
+  
+    .card {  
+      background: #ffffff;  
+      border-radius: 12px;  
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);  
+      padding: 40px 20px;  
+      transition: transform 0.2s;  
+    }  
+  
+    .card:hover {  
+      transform: translateY(-4px);  
+    }  
+  
+    .logo {  
+      text-align: center;  
+      margin-bottom: 30px;  
+    }  
+  
+    .logo img {  
+      max-width: 200px;  
+      height: auto;  
+    }  
+  
+    .hero {  
+      text-align: center;  
+    }  
+  
+    .hero h1 {  
+      font-size: 36px;  
+      margin-bottom: 15px;  
+    }  
+  
+    .hero p {  
+      font-size: 18px;  
+      color: #555;  
+      margin-bottom: 30px;  
+    }  
+  
+    .btn {  
+      display: inline-block;  
+      padding: 14px 28px;  
+      background: #25D366;  
+      color: #fff;  
+      border-radius: 8px;  
+      font-size: 16px;  
+      font-weight: bold;  
+    }  
+  
+    .stats {  
+      display: grid;  
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+      gap: 20px;  
+      margin: 50px 0;  
+    }  
+  
+    .stat-box {  
+      text-align: center;  
+      padding: 30px;  
+    }  
+  
+    .stat-box h2 {  
+      font-size: 32px;  
+      margin-bottom: 8px;  
+      color: #1f7cff;  
+    }  
+  
+    .services {  
+      margin-top: 40px;  
+    }  
+  
+    .services h2 {  
+      text-align: center;  
+      margin-bottom: 30px;  
+    }  
+  
+    .service-list {  
+      display: grid;  
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  
+      gap: 20px;  
+    }  
+  
+    .service-item {  
+      background: #f5f7fa;  
+      padding: 25px;  
+      border-radius: 10px;  
+      text-align: center;  
+      font-weight: bold;  
+    }  
+  
+    .contact {  
+      margin-top: 50px;  
+      text-align: center;  
+      font-size: 18px;  
+      font-weight: bold;  
+    }  
+  
+    footer {  
+      text-align: center;  
+      margin-top: 50px;  
+      color: #666;  
+      font-size: 14px;  
+    }  
+  
+    /* FLOATING WHATSAPP */  
+    .wa-float {  
+      position: fixed;  
+      width: 64px;  
+      height: 64px;  
+      bottom: 25px;  
+      right: 25px;  
+      background-color: #25D366;  
+      border-radius: 50%;  
+      display: flex;  
+      align-items: center;  
+      justify-content: center;  
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);  
+      animation: pulse 1.6s infinite;  
+      z-index: 9999;  
+    }  
+  
+    .wa-float img {  
+      width: 34px;  
+      height: 34px;  
+    }  
+  
+    @keyframes pulse {  
+      0% {  
+        transform: scale(1);  
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);  
+      }  
+      70% {  
+        transform: scale(1.1);  
+        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);  
+      }  
+      100% {  
+        transform: scale(1);  
+      }  
+    }  
+  </style>  
+</head>  
+<body>  
+  
+<a href="https://wa.me/6285237474741?text=Halo%20CS%20AdaKami." target="_blank">  
+  <div class="container">  
+  
+    <div class="logo">  
+      <img src="https://69543702934f3f92381f9e9c.imgix.net/csadakami.png" alt="Adakami">  
+    </div>  
+  
+    <div class="card hero">  
+      <h1>Layanan Bantuan Profesional</h1>  
+      <p>  
+        Solusi terpercaya untuk semua kebutuhan bantuan Anda.    
+        Kami hadir dengan layanan profesional, cepat, dan terpercaya.  
+      </p>  
+      <span class="btn">Hubungi Kami di WhatsApp</span>  
+    </div>  
+  
+    <div class="stats">  
+      <div class="card stat-box">  
+        <h2>24/7</h2>  
+        <p>Siap Melayani</p>  
+      </div>  
+      <div class="card stat-box">  
+        <h2>100%</h2>  
+        <p>Terpercaya</p>  
+      </div>  
+      <div class="card stat-box">  
+        <h2>Cepat</h2>  
+        <p>Respon Cepat</p>  
+      </div>  
+    </div>  
+  
+    <div class="card services">  
+      <h2>Layanan</h2>  
+      <div class="service-list">  
+        <div class="service-item">Konsultasi</div>  
+        <div class="service-item">Bantuan 24/7</div>  
+        <div class="service-item">Dukungan Teknis</div>  
+        <div class="service-item">Solusi Profesional</div>  
+      </div>  
+    </div>  
+  
+    <div class="card contact">  
+      <p>Hubungi Kami</p>  
+      <p>6285237474741</p>  
+      <p>Tersedia 24/7 untuk Anda</p>  
+    </div>  
+  
+    <footer>  
+      © 2025 Adakami. Dibuat untuk melayani Anda  
+    </footer>  
+  
+  </div>  
+</a>  
+  
+<!-- WHATSAPP FLOATING -->  
+<a  
+  href="https://wa.me/6285237474741?text=Halo%20CS%20AdaKami."  
+  class="wa-float"  
+  target="_blank"  
+>  
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">  
+</a>  
+  
+</body>  
+</html>  
