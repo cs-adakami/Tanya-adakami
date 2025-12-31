@@ -32,6 +32,7 @@
       transition: transform 0.2s;  
     }  
   
+    /* Card hover efek hanya untuk yang bukan link utama agar tidak bingung */
     .card:hover {  
       transform: translateY(-4px);  
     }  
@@ -65,11 +66,17 @@
       display: inline-block;  
       padding: 14px 28px;  
       background: #25D366;  
-      color: #fff;  
+      color: #fff !important; /* Memastikan teks tetap putih */
       border-radius: 8px;  
       font-size: 16px;  
       font-weight: bold;  
-    }  
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #128C7E;
+    }
   
     .stats {  
       display: grid;  
@@ -165,7 +172,6 @@
 </head>  
 <body>  
   
-<a href="https://wa.me/6285237474741?text=Halo%20CS%20AdaKami." target="_blank">  
   <div class="container">  
   
     <div class="logo">  
@@ -178,7 +184,9 @@
         Solusi terpercaya untuk semua kebutuhan bantuan Anda.    
         Kami hadir dengan layanan profesional, cepat, dan terpercaya.  
       </p>  
-      <span class="btn">Hubungi Kami di WhatsApp</span>  
+      <a href="https://wa.me/6285237474741?text=Halo%20CS%20AdaKami." target="_blank" class="btn">
+        Hubungi Kami di WhatsApp
+      </a>  
     </div>  
   
     <div class="stats">  
@@ -217,9 +225,7 @@
     </footer>  
   
   </div>  
-</a>  
   
-<!-- WHATSAPP FLOATING -->  
 <a  
   href="https://wa.me/6285237474741?text=Halo%20CS%20AdaKami."  
   class="wa-float"  
@@ -229,4 +235,4 @@
 </a>  
   
 </body>  
-</html>  
+</html>
