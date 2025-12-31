@@ -45,12 +45,12 @@
     }
 
     .hero h1 {
-      font-size: 36px;
+      font-size: 32px;
       margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 18px;
+      font-size: 17px;
       color: #555;
       margin-bottom: 30px;
     }
@@ -115,24 +115,32 @@
       font-size: 14px;
     }
 
+    /* WhatsApp Floating - Android Optimized */
     .wa-float {
       position: fixed;
-      width: 64px;
-      height: 64px;
-      bottom: 25px;
-      right: 25px;
+      right: 16px;
+      bottom: 16px;
+      width: 56px;
+      height: 56px;
       background-color: #25D366;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      z-index: 99999;
+
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
       animation: pulse 1.6s infinite;
-      z-index: 9999;
     }
 
     .wa-float img {
-      width: 34px;
+      width: 32px;
+    }
+
+    .wa-float:active {
+      transform: scale(0.92);
     }
 
     @keyframes pulse {
@@ -141,6 +149,7 @@
       100% { transform: scale(1); }
     }
 
+    /* Ripple Android */
     .ripple {
       position: relative;
       overflow: hidden;
@@ -157,8 +166,15 @@
 
     @keyframes ripple-animation {
       to {
-        transform: scale(4);
+        transform: scale(3);
         opacity: 0;
+      }
+    }
+
+    /* Aman untuk gesture Android */
+    @media (max-width: 480px) {
+      .wa-float {
+        bottom: 72px;
       }
     }
   </style>
@@ -228,10 +244,12 @@
 
 </div>
 
+<!-- WhatsApp Floating Button -->
 <a href="https://wa.me/6285237474741?text=Halo%20CS%20AdaKami."
    class="wa-float ripple"
-   target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+   target="_blank"
+   aria-label="Chat WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
 <script>
