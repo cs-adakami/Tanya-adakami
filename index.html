@@ -14,7 +14,7 @@
         /* --- CSS UTAMA --- */
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f6f9;
+            background-color: #0c2c52; /* Latar Biru Tua Full */
             margin: 0;
             padding: 0;
             color: #333;
@@ -24,7 +24,7 @@
 
         /* --- WARNA TEMA --- */
         .latar-birutua {
-            background-color: #0c2c52; /* Biru Tua Adakami */
+            background-color: #0c2c52; 
             color: white;
             padding: 20px 0;
             margin-bottom: 10px;
@@ -52,36 +52,50 @@
             margin: 0 auto;
         }
 
-        /* --- TOMBOL (BTN) --- */
+        /* --- TOMBOL (BTN) - GAYA GLASSMORPHISM (TRANSPARAN) --- */
         .btn1 {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
             width: 100%;
-            background-color: #0c2c52; /* Background Biru */
-            color: #ffffff !important; /* Teks Putih */
-            padding: 12px 20px;
+            
+            /* UBAH: Efek Kaca / Transparan */
+            background: rgba(255, 255, 255, 0.1); 
+            backdrop-filter: blur(5px); /* Efek blur di belakang tombol (opsional untuk browser support) */
+            
+            /* Border tipis putih agar terlihat rapi */
+            border: 1px solid rgba(255, 255, 255, 0.3); 
+            
+            /* Teks Putih */
+            color: #ffffff !important; 
+            
+            padding: 15px 25px;
             margin-bottom: 15px;
-            border-radius: 50px;
-            border: 2px solid #ffffff;
+            border-radius: 12px;
             font-size: 16px;
-            font-weight: 600;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            font-weight: 500;
+            letter-spacing: 0.5px;
             transition: all 0.3s ease;
             position: relative;
         }
         
+        /* Efek Hover */
         .btn1:hover {
-            background-color: #004085;
+            background: rgba(255, 255, 255, 0.25); /* Lebih terang saat disentuh */
+            border-color: rgba(255, 255, 255, 0.8); /* Garis pinggir lebih tegas */
             transform: translateY(-2px);
-            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             color: #fff !important;
         }
 
-        .img-btn {
-            width: 24px;
-            height: 24px;
-            margin-right: 15px;
-            vertical-align: middle;
-            filter: brightness(0) invert(1);
+        /* --- IKON --- */
+        .btn1 i {
+            font-size: 22px;
+            margin-right: 18px;
+            width: 30px;
+            text-align: center;
+            color: #ffffff; /* Ikon Putih */
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         /* --- FOOTER --- */
@@ -90,6 +104,7 @@
             color: white;
             padding: 30px 0;
             margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1); 
         }
         .garis-putih {
             border-bottom: 1px solid rgba(255,255,255,0.3);
@@ -118,7 +133,7 @@
 <div id="landingpage">
     
     <div id="header-home">
-        <div class="fitur oke latar-birutua">
+        <div class="fitur oke latar-birutua" style="margin-bottom: 0;"> 
             <div class="konten">
                 <div class="row">
                     <div class="col-md-12">
@@ -141,35 +156,28 @@
     </div>
 
     <div id="HTML4">
-        <div class="fitur oke">
+        <div class="fitur oke" style="background-color: #0c2c52; padding-top: 10px;">
             <div class="konten tengah">
-                <p>
-                    <a class="btn1 teks-kiri" href="https://api.whatsapp.com/send?phone=62822333391&amp;text=Hallo%20CS%20Adakami" target="_blank">
-                        <img class="img-btn" src="https://static.adakami.id/gfe/www/content/images/complain/communication-customer-service.png" alt="">
-                        Bayar Cicilan/Pelunasan
-                    </a>
-                </p>
+                
+                <a class="btn1" href="https://api.whatsapp.com/send?phone=62822333391&amp;text=Hallo%20CS%20Adakami" target="_blank">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <span>Bayar Cicilan/Pelunasan</span>
+                </a>
 
-                <p>
-                    <a class="btn1 teks-kiri" href="https://api.whatsapp.com/send?phone=62822333391&amp;text=Hallo%20CS%20Adakami" target="_blank">
-                        <img class="img-btn" src="https://static.adakami.id/gfe/www/content/images/complain/communication-customer-service.png" alt="">
-                        Pembatalan Adakami 
-                    </a>
-                </p>
+                <a class="btn1" href="https://api.whatsapp.com/send?phone=62822333391&amp;text=Hallo%20CS%20Adakami" target="_blank">
+                    <i class="fas fa-ban"></i>
+                    <span>Pembatalan Adakami</span>
+                </a>
 
-                <p>
-                    <a class="btn1 teks-kiri" href="https://api.whatsapp.com/send?phone=62822333391&amp;text=Hallo%20CS%20Adakami" target="_blank">
-                        <img class="img-btn" src="https://static.adakami.id/gfe/www/content/images/complain/communication-customer-service.png" alt="">
-                        Ganti Tenor
-                    </a>
-                </p>
+                <a class="btn1" href="https://api.whatsapp.com/send?phone=62822333391&amp;text=Hallo%20CS%20Adakami" target="_blank">
+                    <i class="fas fa-clock"></i>
+                    <span>Ganti Tenor</span>
+                </a>
 
-                <p>
-                    <a class="btn1 teks-kiri" href="https://api.whatsapp.com/send?phone=62822333391&amp;text=Hallo%20CS%20Adakami" target="_blank">
-                        <img class="img-btn" src="https://static.adakami.id/gfe/www/content/images/complain/communication-customer-service.png" alt="">
-                        Live Chat Adakami
-                    </a>
-                </p>
+                <a class="btn1" href="https://api.whatsapp.com/send?phone=62822333391&amp;text=Hallo%20CS%20Adakami" target="_blank">
+                    <i class="fas fa-headset"></i>
+                    <span>Live Chat Adakami</span>
+                </a>
             </div>
         </div> 
     </div>
