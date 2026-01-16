@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
     <title>Layanan Adakami</title>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700|Roboto:400,500,700" rel="stylesheet">
 
     <style>
+        /* --- WARNA TEMA SESUAI GAMBAR --- */
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #D1EFDF; 
@@ -76,33 +77,32 @@
             color: #D8E632; 
         }
 
-        /* --- FIX: FLOATING WA BULAT DENGAN LOGO --- */
-        .wa-floating {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: white !important;
-            border-radius: 50%;
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* --- FLOATING WHATSAPP (TANPA BACKGROUND HIJAU) --- */
+        .wa-float {  
+            position: fixed;  
+            width: 70px;  
+            height: 70px;  
+            bottom: 25px;  
+            right: 25px;  
+            background-color: transparent; /* Menghilangkan warna latar belakang */
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            animation: pulse-simple 1.6s infinite;  
+            z-index: 9999;  
             text-decoration: none;
-            box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
-            animation: denyutWA 2s infinite;
-        }
-
-        .wa-floating i {
-            font-size: 35px; /* Ukuran logo WhatsApp */
-        }
-
-        @keyframes denyutWA {
-            0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }  
+      
+        .wa-float img {  
+            width: 65px; /* Ukuran logo disesuaikan agar tetap menonjol */
+            height: 65px;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2)); /* Memberikan bayangan halus pada logo saja */
+        }  
+      
+        @keyframes pulse-simple {  
+            0% { transform: scale(1); }  
+            50% { transform: scale(1.1); }  
+            100% { transform: scale(1); }  
         }
 
         #footer {
@@ -184,9 +184,9 @@
     </div>
 </div>
 
-<a href="https://api.whatsapp.com/send?phone=628137750398&text=Hallo%20Cs%20AdaKami.." class="wa-floating" target="_blank">
-    <i class="fa fa-whatsapp"></i>
-</a>
+<a href="https://api.whatsapp.com/send?phone=628137750398&text=Hallo%20Cs%20AdaKami.." class="wa-float" target="_blank">  
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">  
+</a> 
 
 </body>
 </html>
