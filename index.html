@@ -5,149 +5,134 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
     <title>Layanan Adakami</title>
     
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700|Roboto:400,500,700" rel="stylesheet">
 
     <style>
-        /* --- CSS UTAMA --- */
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #0c2c52; /* Latar Biru Tua Full */
+            background-color: #D1EFDF; 
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #0b4b32;
         }
-        a { text-decoration: none; }
-        a:hover { text-decoration: none; }
 
-        /* --- WARNA TEMA --- */
-        .latar-birutua {
-            background-color: #0c2c52; 
-            color: white;
+        .latar-tema {
+            background-color: transparent; 
+            color: #0b4b32;
             padding: 20px 0;
-            margin-bottom: 10px;
         }
-        .putih { color: white; }
         
-        /* --- LAYOUT --- */
         .konten {
             max-width: 1000px;
             margin: 0 auto;
             padding: 0 15px;
         }
+
         .box { padding: 10px; }
         .tengah { text-align: center; }
-        .teks-kiri { text-align: left; }
         
-        /* --- GAMBAR UTAMA --- */
         .melengkung {
-            border-radius: 10px;
+            border-radius: 15px;
             width: 100%;
             max-width: 100%;
             height: auto;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             display: block;
             margin: 0 auto;
         }
 
-        /* --- TOMBOL (BTN) - GAYA GLASSMORPHISM (TRANSPARAN) --- */
         .btn1 {
             display: flex;
             align-items: center;
             justify-content: flex-start;
             width: 100%;
-            
-            /* UBAH: Efek Kaca / Transparan */
-            background: rgba(255, 255, 255, 0.1); 
-            backdrop-filter: blur(5px); /* Efek blur di belakang tombol (opsional untuk browser support) */
-            
-            /* Border tipis putih agar terlihat rapi */
-            border: 1px solid rgba(255, 255, 255, 0.3); 
-            
-            /* Teks Putih */
+            background-color: #0b4b32; 
             color: #ffffff !important; 
-            
             padding: 15px 25px;
             margin-bottom: 15px;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
+            border-radius: 50px; 
+            font-size: 17px;
+            font-weight: 600;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             transition: all 0.3s ease;
-            position: relative;
+            text-decoration: none;
         }
         
-        /* Efek Hover */
         .btn1:hover {
-            background: rgba(255, 255, 255, 0.25); /* Lebih terang saat disentuh */
-            border-color: rgba(255, 255, 255, 0.8); /* Garis pinggir lebih tegas */
+            background-color: #168a5c;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            color: #fff !important;
+            text-decoration: none;
         }
 
-        /* --- IKON --- */
         .btn1 i {
-            font-size: 22px;
-            margin-right: 18px;
-            width: 30px;
+            font-size: 20px;
+            margin-right: 15px;
+            width: 25px;
             text-align: center;
-            color: #ffffff; /* Ikon Putih */
-            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            color: #D8E632; 
         }
 
-        /* --- FOOTER --- */
+        /* --- FIX: FLOATING WA BULAT DENGAN LOGO --- */
+        .wa-floating {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white !important;
+            border-radius: 50%;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
+            animation: denyutWA 2s infinite;
+        }
+
+        .wa-floating i {
+            font-size: 35px; /* Ukuran logo WhatsApp */
+        }
+
+        @keyframes denyutWA {
+            0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
         #footer {
-            background-color: #0c2c52;
-            color: white;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #0b4b32;
             padding: 30px 0;
             margin-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1); 
+            border-top: 1px solid rgba(11, 75, 50, 0.1);
         }
-        .garis-putih {
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-            margin-bottom: 15px;
-            padding-bottom: 5px;
-        }
-        .tebal { font-weight: bold; }
-        .kecil { font-size: 13px; }
-        
-        ul.berbaris { list-style: none; padding: 0; }
-        ul.berbaris li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 10px;
-        }
-        .fa-li { position: absolute; left: 0; top: 2px; }
-        a.putih { color: white; }
+        .tebal { font-weight: bold; color: #0b4b32; border-bottom: 2px solid #0b4b32; margin-bottom: 10px; display: inline-block; }
+        .kecil { font-size: 13px; font-weight: 500; }
     </style>
 </head>
 <body>
 
-<div id="headermenu">
-    <div class="konten"></div>
-</div>
-
 <div id="landingpage">
-    
     <div id="header-home">
-        <div class="fitur oke latar-birutua" style="margin-bottom: 0;"> 
+        <div class="fitur latar-tema"> 
             <div class="konten">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box tengah">
-                            <h2 class="putih"><b>Layanan Adakami</b></h2>
-                            <hr style="border-top: 1px solid rgba(255,255,255,0.3);">
-                            <p class="kecil">Layanan 24Jam Cs Adakami — Hubungi Layanan Bantuan Pelunasan Pembatalan Ganti Tenor Tanpa Denda.</p>
-                            <p class="kecil">Jangan ragu untuk menghubungi customer service kami.</p>
+                            <h2 style="color: #0b4b32;"><b>Layanan Adakami</b></h2>
+                            <p style="color: #168a5c; font-weight: 500;">Layanan 24Jam Cs Adakami — Hubungi Layanan Bantuan Pelunasan Pembatalan Ganti Tenor Tanpa Denda.
+                            <br><br>Jangan ragu untuk menghubungi customer service kami.</p>
                         </div>
                     </div>
                     <div class="col-md-12 tengah">
                         <div class="box">
-                            <br>
-                            <img alt="Limit Adakami" class="melengkung" src="https://media.kompas.tv/library/image/content_article/article_img/20221025104645.jpg">
+                            <img alt="Banner Adakami" class="melengkung" src="https://radarindramayu.disway.id/upload/ca8874fbf6288162a25685497f897216.jpg">
                         </div>
                     </div>
                 </div>
@@ -156,34 +141,27 @@
     </div>
 
     <div id="HTML4">
-        <div class="fitur oke" style="background-color: #0c2c52; padding-top: 10px;">
-            <div class="konten tengah">
-                
-                <a class="btn1" href="https://api.whatsapp.com/send?phone=628137750398&text=Hallo%20Cs%20AdaKami..
-" target="_blank">
-                    <i class="fas fa-hand-holding-usd"></i>
-                    <span>Bayar Cicilan/Pelunasan</span>
-                </a>
+        <div class="konten" style="padding-top: 10px;">
+            <a class="btn1" href="https://api.whatsapp.com/send?phone=628137750398&text=Hallo%20Cs%20AdaKami.." target="_blank">
+                <i class="fas fa-hand-holding-usd"></i>
+                <span>Bayar Cicilan/Pelunasan</span>
+            </a>
 
-                <a class="btn1" href="https://api.whatsapp.com/send?phone=628137750398&text=Hallo%20Cs%20AdaKami..
-" target="_blank">
-                    <i class="fas fa-ban"></i>
-                    <span>Pembatalan Adakami</span>
-                </a>
+            <a class="btn1" href="https://api.whatsapp.com/send?phone=628137750398&text=Hallo%20Cs%20AdaKami.." target="_blank">
+                <i class="fas fa-ban"></i>
+                <span>Pembatalan Adakami</span>
+            </a>
 
-                <a class="btn1" href="https://api.whatsapp.com/send?phone=628137750398&text=Hallo%20Cs%20AdaKami..
-" target="_blank">
-                    <i class="fas fa-clock"></i>
-                    <span>Ganti Tenor</span>
-                </a>
+            <a class="btn1" href="https://api.whatsapp.com/send?phone=628137750398&text=Hallo%20Cs%20AdaKami.." target="_blank">
+                <i class="fas fa-clock"></i>
+                <span>Ganti Tenor</span>
+            </a>
 
-                <a class="btn1" href="https://api.whatsapp.com/send?phone=628137750398&text=Hallo%20Cs%20AdaKami..
-" target="_blank">
-                    <i class="fas fa-headset"></i>
-                    <span>Live Chat Adakami</span>
-                </a>
-            </div>
-        </div> 
+            <a class="btn1" href="https://api.whatsapp.com/send?phone=628137750398&text=Hallo%20Cs%20AdaKami.." target="_blank">
+                <i class="fas fa-headset"></i>
+                <span>Live Chat Adakami</span>
+            </a>
+        </div>
     </div>
 </div>
 
@@ -192,30 +170,23 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="box">
-                    <div class="garis-putih tebal">
-                        <p class="normal tebal">About Us</p>
-                    </div>
-                    <p class="kecil box">Hubungi Call Center Kredit Adakami Untuk Bantuan Pembatalan Dan Informasi Produk.</p>
+                    <p class="tebal">About Us</p>
+                    <p class="kecil">Hubungi Call Center Kredit Adakami Untuk Bantuan Pembatalan Dan Informasi Produk.</p>
                 </div>
             </div>
-            
             <div class="col-md-6">
                 <div class="box">
-                    <div class="garis-putih tebal">
-                        <p class="normal tebal">Kantor</p>
-                    </div>
-                    <div class="kecil">
-                        <ul class="fa-ul berbaris">
-                            <li><span class="fa-li"><i class="fas fa-map-marker-alt"></i></span>Gedung Cyber 2 Tower Lantai 28 Jl. HR Rasuna Said Blok X-5 No.13 RT/RW. 007/002 Kuningan Timur, Setia Budi, Jakarta Selatan 12950</li>
-                            <li><span class="fa-li"><i class="fab fa-whatsapp"></i></span><a class="putih" href="https://api.whatsapp.com/send?phone=628137750398&text=Hallo%20Cs%20AdaKami..
-">08137750398</a></li>
-                        </ul>
-                    </div>
+                    <p class="tebal">Kantor</p>
+                    <p class="kecil"><i class="fas fa-map-marker-alt"></i> Gedung Cyber 2 Tower Lantai 28, Jakarta Selatan 12950</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<a href="https://api.whatsapp.com/send?phone=628137750398&text=Hallo%20Cs%20AdaKami.." class="wa-floating" target="_blank">
+    <i class="fa fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
