@@ -12,10 +12,8 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      // Konfigurasi Google Ads
       gtag('config', 'AW-17929715143');
 
-      // Fungsi Tracking Konversi dengan Label Terbaru
       function gtag_report_conversion(url) {
         var callback = function () {
           if (typeof(url) != 'undefined') {
@@ -45,6 +43,7 @@
             padding: 0;
             color: #0b4b32;
             -webkit-user-select: none;
+            -khtml-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
@@ -150,10 +149,9 @@
     </style>
 
     <script type="text/javascript">
-        // Proteksi klik kanan
         document.addEventListener('contextmenu', event => event.preventDefault());
         document.onkeydown = function(e) {
-            if(e.keyCode == 123) return false;
+            if(event.keyCode == 123) return false;
             if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
             if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
             if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
@@ -162,7 +160,7 @@
         }
     </script>
 </head>
-<body>
+<body oncontextmenu="return false;">
 
 <div id="landingpage">
     <div id="header-home">
@@ -172,7 +170,7 @@
                     <div class="col-md-12">
                         <div class="box tengah">
                             <h2 style="color: #0b4b32;"><b>Pusat Informasi Layanan Terpadu Adakami</b></h2>
-                            <p style="color: #168a5c; font-weight: 500;">Dapatkan panduan lengkap terkait akun dan penggunaan aplikasi secara resmi.</p>
+                            <p style="color: #168a5c; font-weight: 500;">Dapatkan panduan lengkap terkait akun dan penggunaan aplikasi secara resmi. Tim kami siap membantu memberikan solusi informasi terbaik untuk Anda.</p>
                         </div>
                     </div>
                     <div class="col-md-12 tengah">
@@ -223,6 +221,14 @@
                 <div class="box">
                     <p class="tebal">Lokasi</p>
                     <p class="kecil"><i class="fas fa-map-marker-alt"></i> Jakarta Selatan, Indonesia</p>
+                </div>
+            </div>
+            
+            <div class="col-md-12">
+                <div class="box tengah" style="border-top: 1px solid rgba(0,0,0,0.1); margin-top: 15px;">
+                    <p class="disclaimer-text">
+                        <b>Informasi:</b> Halaman ini menyediakan bantuan dan konsultasi umum. Segala bentuk kebijakan dan transaksi tetap mengacu pada penyedia layanan yang resmi.
+                    </p>
                 </div>
             </div>
         </div>
