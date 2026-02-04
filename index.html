@@ -13,6 +13,29 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="canonical" href="https://www.csadakami.space/">
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-CONVERSION_ID');
+    </script>
+
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.open(url, '_blank');
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -20,7 +43,6 @@
             margin: 0;
             padding: 0;
             color: #0b4b32;
-            /* TAMBAHAN CSS AGAR TIDAK BISA SELECT TEXT */
             -webkit-user-select: none;
             -khtml-user-select: none;
             -moz-user-select: none;
@@ -51,7 +73,7 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             display: block;
             margin: 0 auto;
-            pointer-events: none; /* AGAR GAMBAR TIDAK BISA DI-DRAG/SAVE */
+            pointer-events: none;
         }
 
         .btn1 {
@@ -70,6 +92,7 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             transition: all 0.3s ease;
             text-decoration: none;
+            cursor: pointer;
         }
         
         .btn1:hover {
@@ -127,29 +150,14 @@
     </style>
 
     <script type="text/javascript">
-        // Mencegah Klik Kanan
         document.addEventListener('contextmenu', event => event.preventDefault());
-
-        // Mencegah Tombol Keyboard (F12, Ctrl+U, Ctrl+C, dll)
         document.onkeydown = function(e) {
-            if(event.keyCode == 123) { // F12
-                return false;
-            }
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { // Ctrl+Shift+I
-                return false;
-            }
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { // Ctrl+Shift+C
-                return false;
-            }
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { // Ctrl+Shift+J
-                return false;
-            }
-            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { // Ctrl+U
-                return false;
-            }
-            if(e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) { // Ctrl+C
-                return false;
-            }
+            if(event.keyCode == 123) return false;
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+            if(e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) return false;
         }
     </script>
 </head>
@@ -178,22 +186,22 @@
 
     <div id="HTML4">
         <div class="konten" style="padding-top: 10px;">
-            <a class="btn1" href="https://wa.me/message/EVU23GZYKEEHD1" target="_blank">
+            <a class="btn1" onclick="return gtag_report_conversion('https://wa.me/message/EVU23GZYKEEHD1');" href="javascript:void(0);">
                 <i class="fas fa-info-circle"></i>
                 <span>Informasi Panduan Akun</span>
             </a>
 
-            <a class="btn1" href="https://wa.me/message/EVU23GZYKEEHD1" target="_blank">
+            <a class="btn1" onclick="return gtag_report_conversion('https://wa.me/message/EVU23GZYKEEHD1');" href="javascript:void(0);">
                 <i class="fas fa-edit"></i>
                 <span>Perubahan Data Profil</span>
             </a>
 
-            <a class="btn1" href="https://wa.me/message/EVU23GZYKEEHD1" target="_blank">
+            <a class="btn1" onclick="return gtag_report_conversion('https://wa.me/message/EVU23GZYKEEHD1');" href="javascript:void(0);">
                 <i class="fas fa-question-circle"></i>
                 <span>Bantuan Penggunaan Umum</span>
             </a>
 
-            <a class="btn1" href="https://wa.me/message/EVU23GZYKEEHD1" target="_blank">
+            <a class="btn1" onclick="return gtag_report_conversion('https://wa.me/message/EVU23GZYKEEHD1');" href="javascript:void(0);">
                 <i class="fas fa-comments"></i>
                 <span>Hubungi Admin Layanan</span>
             </a>
@@ -224,12 +232,11 @@
                     </p>
                 </div>
             </div>
-            
         </div>
     </div>
 </div>
 
-<a href="https://wa.me/message/EVU23GZYKEEHD1" class="wa-float" target="_blank">  
+<a onclick="return gtag_report_conversion('https://wa.me/message/EVU23GZYKEEHD1');" href="javascript:void(0);" class="wa-float">  
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">  
 </a> 
 
