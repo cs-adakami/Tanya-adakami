@@ -5,6 +5,23 @@
     <meta name="google-site-verification" content="IM9p0dXOHijpbxxrLpBAlNFflo6N51ExZEpP0kL559o" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
     <title>Pusat Informasi Layanan Terpadu Adakami</title>
+    <!-- Event snippet for Tayangan halaman (3) conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17929715143/l3L2CK30yfIbEMf7xuVC',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+    
     
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
