@@ -11,9 +11,11 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
+      // Konfigurasi Google Ads
       gtag('config', 'AW-17929715143');
 
-      // Fungsi Tunggal untuk Tracking Conversion
+      // Fungsi Tracking Konversi dengan Label Terbaru
       function gtag_report_conversion(url) {
         var callback = function () {
           if (typeof(url) != 'undefined') {
@@ -21,7 +23,7 @@
           }
         };
         gtag('event', 'conversion', {
-            'send_to': 'AW-17929715143/l3L2CK30yfIbEMf7xuVC',
+            'send_to': 'AW-17929715143/aKmqCLHvsvIbEMf7xuVC',
             'event_callback': callback
         });
         return false;
@@ -148,7 +150,7 @@
     </style>
 
     <script type="text/javascript">
-        // Proteksi Klik Kanan & Shortcut
+        // Proteksi klik kanan
         document.addEventListener('contextmenu', event => event.preventDefault());
         document.onkeydown = function(e) {
             if(e.keyCode == 123) return false;
@@ -221,14 +223,6 @@
                 <div class="box">
                     <p class="tebal">Lokasi</p>
                     <p class="kecil"><i class="fas fa-map-marker-alt"></i> Jakarta Selatan, Indonesia</p>
-                </div>
-            </div>
-            
-            <div class="col-md-12">
-                <div class="box tengah" style="border-top: 1px solid rgba(0,0,0,0.1); margin-top: 15px;">
-                    <p class="disclaimer-text">
-                        <b>Informasi:</b> Halaman ini menyediakan bantuan dan konsultasi umum. Segala bentuk kebijakan dan transaksi tetap mengacu pada penyedia layanan yang resmi.
-                    </p>
                 </div>
             </div>
         </div>
