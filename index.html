@@ -20,6 +20,12 @@
             margin: 0;
             padding: 0;
             color: #0b4b32;
+            /* TAMBAHAN CSS AGAR TIDAK BISA SELECT TEXT */
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
         .latar-tema {
@@ -45,6 +51,7 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             display: block;
             margin: 0 auto;
+            pointer-events: none; /* AGAR GAMBAR TIDAK BISA DI-DRAG/SAVE */
         }
 
         .btn1 {
@@ -98,6 +105,7 @@
             width: 65px;
             height: 65px;
             filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+            pointer-events: none;
         }  
       
         @keyframes pulse-simple {  
@@ -115,9 +123,37 @@
         }
         .tebal { font-weight: bold; color: #0b4b32; border-bottom: 2px solid #0b4b32; margin-bottom: 10px; display: inline-block; }
         .kecil { font-size: 13px; font-weight: 500; }
+        .disclaimer-text { font-size: 11px; color: #555; line-height: 1.4; margin-top: 15px; font-style: italic; }
     </style>
+
+    <script type="text/javascript">
+        // Mencegah Klik Kanan
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Mencegah Tombol Keyboard (F12, Ctrl+U, Ctrl+C, dll)
+        document.onkeydown = function(e) {
+            if(event.keyCode == 123) { // F12
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { // Ctrl+Shift+I
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { // Ctrl+Shift+C
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { // Ctrl+Shift+J
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { // Ctrl+U
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) { // Ctrl+C
+                return false;
+            }
+        }
+    </script>
 </head>
-<body>
+<body oncontextmenu="return false;">
 
 <div id="landingpage">
     <div id="header-home">
@@ -180,6 +216,15 @@
                     <p class="kecil"><i class="fas fa-map-marker-alt"></i> Jakarta Selatan, Indonesia</p>
                 </div>
             </div>
+            
+            <div class="col-md-12">
+                <div class="box tengah" style="border-top: 1px solid rgba(0,0,0,0.1); margin-top: 15px;">
+                    <p class="disclaimer-text">
+                        <b>Informasi:</b> Halaman ini menyediakan bantuan dan konsultasi umum. Segala bentuk kebijakan dan transaksi tetap mengacu pada penyedia layanan yang resmi.
+                    </p>
+                </div>
+            </div>
+            
         </div>
     </div>
 </div>
