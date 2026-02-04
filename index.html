@@ -5,23 +5,28 @@
     <meta name="google-site-verification" content="IM9p0dXOHijpbxxrLpBAlNFflo6N51ExZEpP0kL559o" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
     <title>Pusat Informasi Layanan Terpadu Adakami</title>
-    <!-- Event snippet for Tayangan halaman (3) conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17929715143/l3L2CK30yfIbEMf7xuVC',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
     
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17929715143"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17929715143');
+
+      // Fungsi Tunggal untuk Tracking Conversion
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17929715143/l3L2CK30yfIbEMf7xuVC',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
     
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
@@ -29,38 +34,6 @@ function gtag_report_conversion(url) {
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700|Roboto:400,500,700" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="canonical" href="https://www.csadakami.space/">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17929715143"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17929715143');
-</script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-CONVERSION_ID');
-    </script>
-
-    <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.open(url, '_blank');
-        }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
-          'event_callback': callback
-      });
-      return false;
-    }
-    </script>
 
     <style>
         body {
@@ -70,7 +43,6 @@ function gtag_report_conversion(url) {
             padding: 0;
             color: #0b4b32;
             -webkit-user-select: none;
-            -khtml-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
@@ -176,9 +148,10 @@ function gtag_report_conversion(url) {
     </style>
 
     <script type="text/javascript">
+        // Proteksi Klik Kanan & Shortcut
         document.addEventListener('contextmenu', event => event.preventDefault());
         document.onkeydown = function(e) {
-            if(event.keyCode == 123) return false;
+            if(e.keyCode == 123) return false;
             if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
             if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
             if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
@@ -187,7 +160,7 @@ function gtag_report_conversion(url) {
         }
     </script>
 </head>
-<body oncontextmenu="return false;">
+<body>
 
 <div id="landingpage">
     <div id="header-home">
@@ -197,7 +170,7 @@ function gtag_report_conversion(url) {
                     <div class="col-md-12">
                         <div class="box tengah">
                             <h2 style="color: #0b4b32;"><b>Pusat Informasi Layanan Terpadu Adakami</b></h2>
-                            <p style="color: #168a5c; font-weight: 500;">Dapatkan panduan lengkap terkait akun dan penggunaan aplikasi secara resmi. Tim kami siap membantu memberikan solusi informasi terbaik untuk Anda.</p>
+                            <p style="color: #168a5c; font-weight: 500;">Dapatkan panduan lengkap terkait akun dan penggunaan aplikasi secara resmi.</p>
                         </div>
                     </div>
                     <div class="col-md-12 tengah">
